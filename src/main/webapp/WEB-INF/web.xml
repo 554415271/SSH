@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>SSH</display-name>
+  
+  <!-- 防止中文参数乱码 放在前面 -->
+	<filter>
+		<filter-name>characterEncodingFilter</filter-name>
+		<filter-class>org.springframework.web.filter.CharacterEncodingFilter
+		</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>characterEncodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	 
+  <!-- Struts2框架核心过滤器配置 -->
+  <filter>
+     <filter-name>Struts2</filter-name>
+     <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+     <filter-name>Struts2</filter-name>
+     <url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
+  <!-- Spring框架核心监听器配置 -->
+  <listener>
+    <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+  </listener>
+  
+  <context-param>
+    <param-name>contextConfigLocation</param-name>
+    <param-value>classpath:applicationContext.xml</param-value>
+  </context-param>  
+ 
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

@@ -1,0 +1,146 @@
+@charset "UTF-8";
+
+#navbar{
+	position: fixed;
+	top:0px;
+	left:10px;
+	width:100%;
+	height:70px;
+	z-index:2;
+}
+
+.user_chaxun_all {
+	position: absolute;
+	top: 5%;
+	left: 10%;
+}
+
+.user_chaxun_all_text {
+	text-decoration: none;
+	font-size: 11px;
+}
+
+#success_leftBar{
+	background-color:#c0c0c0;
+}
+
+.user_addUser {
+	position: absolute;
+	top: 18%;
+	left: 50%;
+	width: 300px;
+	margin-left: -150px;
+}
+
+#content_table{
+	background-color:#FFFAFA;
+	border:0px;
+	cellspacing:0px;
+	cellpadding:0px;
+} 
+ 
+.mouseOver {
+	background: #c9c9c9;
+	color: #FFFAFA;
+}
+
+.mouseOut {
+	background: #FFFAFA;
+	color: #000000;
+}
+
+#userPic{
+	margin-left: 10px;
+	margin-top: -11px;
+}
+
+#userPic img {
+	width: 60px;
+	height: 60px;
+}
+
+#userPic #touxiankuan{
+	position:absolute;
+	z-index:2;
+}
+
+#userPic #touxian{
+	position:absolute;
+	z-index:1;
+}
+
+#navbar-right{
+	position:absolute;
+	right:65px;
+}
+
+.container-fluid span{
+	font-size: 12px;
+}
+
+#Album_Carousel{
+	width:90%;
+	height:10%;
+	margin:1em auto;
+}
+
+#Album_Carousel img{
+	margin-top:5px;
+	width:98%;
+	height:100%;
+}
+
+#add_pictures_a{
+	background-color:transparent; 
+	border:none;
+}
+
+.masonry {
+	-moz-column-count:2; /* 火狐 */
+	-webkit-column-count:2; /* Safari 和 谷歌 */
+	column-count:2;
+	-moz-column-gap: 1em;
+	-webkit-column-gap: 1em;
+	column-gap: 1em;
+	width:50%; 
+	margin-left:32%; 
+	margin-top:85px;
+	z-index:1;
+}
+
+.Ta_item {
+	padding: 1em;
+	margin-bottom: -2em;
+	-moz-page-break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+	break-inside: avoid;
+}
+
+@media screen and (max-width: 800px) {
+	.masonry {
+		column-count: 2; // two columns on larger phones
+	}
+}
+@media screen and (max-width: 500px) {
+	.masonry {
+		column-count: 1; // two columns on larger phones
+	}
+}
+
+#Album_left{
+	position: fixed;
+	top:100px;
+	left:10px;
+	width:30%;
+	min-height:100%;
+	background-color:#ffffff;
+}
+
+#Album_right{
+	position: fixed;
+	top:100px;
+	right:10px;
+	width:16%;
+	min-height:100%;
+	background-color:#ffffff;
+}
